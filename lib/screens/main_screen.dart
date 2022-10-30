@@ -3,6 +3,7 @@ import 'package:flutter_foodybite/screens/add.dart';
 import 'package:flutter_foodybite/screens/home.dart';
 import 'package:flutter_foodybite/screens/label.dart';
 import 'package:flutter_foodybite/screens/profile.dart';
+import 'package:flutter_foodybite/screens/edit_profile.dart';
 
 import 'notifications.dart';
 
@@ -27,8 +28,8 @@ class _MainScreenState extends State<MainScreen> {
     Home(),
     Label(),
     Add(),
-    Notifications(),
     Profile(),
+    EditProfile(),
   ];
 
   @override
@@ -56,15 +57,15 @@ class _MainScreenState extends State<MainScreen> {
         color: Theme.of(context).primaryColor,
         shape: CircularNotchedRectangle(),
       ),
-      floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        elevation: 10.0,
-        child: Icon(
-          Icons.add,
-        ),
-        onPressed: () => _pageController.jumpToPage(2),
-      ),
+      // floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      // floatingActionButton: FloatingActionButton(
+      //   elevation: 10.0,
+      //   child: Icon(
+      //     Icons.add,
+      //   ),
+      //   onPressed: () => _pageController.jumpToPage(2),
+      // ),
     );
   }
 
@@ -92,7 +93,8 @@ class _MainScreenState extends State<MainScreen> {
 
   buildTabIcon(int index) {
       return Container(
-        margin: EdgeInsets.fromLTRB( index == 3 ? 30 : 0, 0,  index == 1 ? 30 : 0, 0),
+        // margin: EdgeInsets.fromLTRB( index == 3 ? 30 : 0, 0,  index == 1 ? 30 : 0, 0),
+        margin: EdgeInsets.all(4),
         child: IconButton(
           icon: Icon(
             icons[index],

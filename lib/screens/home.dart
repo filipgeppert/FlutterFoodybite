@@ -25,17 +25,17 @@ class Home extends StatelessWidget {
           padding: const EdgeInsets.fromLTRB(10.0, 0, 10.0, 0),
           child: ListView(
             children: <Widget>[
-              buildSearchBar(context),
+              // buildSearchBar(context),
               SizedBox(height: 20.0),
-              buildRestaurantRow('Trending Restaurants', context),
+              buildRestaurantRow('Future events:', context),
               SizedBox(height: 10.0),
               buildRestaurantList(context),
               SizedBox(height: 10.0),
-              buildCategoryRow('Category', context),
+              buildCategoryRow('Marketplace:', context),
               SizedBox(height: 10.0),
               buildCategoryList(context),
               SizedBox(height: 20.0),
-              buildCategoryRow('Friends', context),
+              buildCategoryRow('Nomands around:', context),
               SizedBox(height: 10.0),
               buildFriendsList(),
               SizedBox(height: 30.0),
@@ -57,7 +57,7 @@ class Home extends StatelessWidget {
             fontWeight: FontWeight.w800,
           ),
         ),
-        FlatButton(
+        TextButton(
           child: Text(
             "See all (9)",
             style: TextStyle(
@@ -90,7 +90,7 @@ class Home extends StatelessWidget {
             fontWeight: FontWeight.w800,
           ),
         ),
-        FlatButton(
+        TextButton(
           child: Text(
             "See all (9)",
             style: TextStyle(
